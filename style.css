@@ -1,0 +1,158 @@
+/*	Updated stylesheet for YouTube Comment System video */
+
+/* imports */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+/* resets */
+* {
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	font-family:'Calibri', sans-serif;
+	outline:none;
+}
+
+/* Animations */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* body, html */
+html, body {
+	background-color:#edf1f5;
+}
+
+/* content */
+.page-container {
+	width:80%;
+	height:auto;
+	min-height:100vh;
+	margin:0 auto;
+	padding:50px 10px 0px 10px;
+}
+.comment {
+	width:45%;
+	height:auto;
+	padding:7px 23px;
+	margin:0px auto;
+	margin-bottom:10px;
+	text-align:justify;
+}
+.child {
+	margin-top:10px;
+	margin-left:30px;
+	padding-left:5px;
+}
+.child-comments {
+	border-left:1px solid rgba(1,1,1,0.2);
+}
+
+form.main {
+	width:45%;
+	margin:0 auto;
+	margin-top:5px;
+}
+	.form-input {
+		border:1px solid rgba(1,1,1,0.3);
+		width:50%;
+		padding:4px 7px;
+		font-size:13px;
+		line-height:24px;
+		resize:none;
+	}
+	.form-text {
+		border:1px solid rgba(1,1,1,0.3);
+		width:100%;
+		padding:4px 7px;
+		margin-top:5px;
+		font-size:13px;
+		line-height:24px;
+		resize:none;
+		transition:ease 0.2s all;
+		outline:none !important;
+	}
+		.form-text-error {
+			border-color:rgba(237,28,36,0.7);
+			animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+			transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			perspective: 1000px;
+		}
+		.form-text:focus {
+			border-color:rgba(0,114,188,0.7);
+		}
+	.form-submit {
+		text-transform: uppercase;
+		border:1px solid rgba(1,1,1,0.3);
+		cursor:pointer;
+		padding:5px 13px;
+		margin-top:5px;
+	}
+
+/* fonts */
+.user, .time {
+	display:inline-block;
+}
+.user {
+	font-size:13px;
+	color:#0072bc;
+	text-decoration: none;
+	word-break: break-all;
+	line-height:17px;
+}
+.time {
+	font-size:11px;
+	color:#b2b1b1;
+	transition:ease 0.2s all;
+}
+	.comment:hover .time {
+		color:#767676;
+	}
+.comment-text {
+	font-size:13px;
+	line-height:17px;
+	color:#222;
+	margin:0px 10px;
+}
+a {
+	font-size:11.2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#222;
+	cursor:pointer;
+	transition:ease 0.3s all;
+}
+a:hover {
+	color:#0072bc;
+}
+	.link-reply {
+		color:#767676;
+		margin-left:20px;
+	}
+
+h1 {
+	width:45%;
+	height:auto;
+	margin:0px auto;
+	font-size:16px;
+	font-weight:300;
+	text-transform: uppercase;
+	border-bottom:1px solid rgba(1,1,1,0.2);
+}
+
+label {
+	font-size:13px;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
